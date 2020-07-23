@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>javascript task 2</title>
+    
+
+</head>
+<body>
+
+    <div class="container">
+        <p><br></p>
+        <form name="invoice" method="">
+          
+          <table border="1" name="invoice" id="myTable">
+        
+            <tbody>
+                <tr>
+                    <td>enter the name:<input type="text" id="name"></td>  
+
+                  </tr>
+              
+                        <tr>
+                            <td colspan="6"><br>
+                                <button type="button" onClick="myFunction()"/>submit</button>
+                                </td>
+
+                                
+                        </tr>
+                    </tbody>
+                 </table>
+
+              </form>
+          </div>
+    
+        <p id="demo"></p>        
+<script>
+          
+   
+  function myFunction() {
+            
+          var str=document.getElementById("name").value;
+          var str1 = str.toString();
+          var arr=str1.split(",")
+
+   if(( arr.length % 2)!= 0)
+    { 
+      alert('string is odd!');
+     arr.splice((arr.length / 2), 1);
+      var mid = arr.sort();
+       var text="";
+          var i;
+          for(i=0; i<mid.length; i++){
+            text += mid[i] + "<br>";
+          }
+          document.getElementById("demo").innerHTML= text;
+   } else {
+      alert('string is even!');
+          }
+          
+         
+  }
+    </script>
+
+    </body>
+    </html>
+
